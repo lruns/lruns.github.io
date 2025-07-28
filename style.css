@@ -98,15 +98,14 @@ body {
     text-decoration: none;
 }
 .sphere:hover { transform: scale(1.08) !important; z-index: 10; }
-.sphere svg {width: 50%; height: 50%; transition: filter 0.3s ease; }
-.sphere {color: white}
-.sphere:hover svg { filter: drop-shadow(0 0 8px #fff); }
+.sphere svg {filter: brightness(0) invert(1); width: 50%; height: 50%; transition: filter 0.3s ease; }
+.sphere:hover svg { filter: brightness(1) invert(1) drop-shadow(0 0 8px #fff); }
 
 .primary-sphere { box-shadow: 0 0 10px #00aaff, 0 0 20px #00aaff, inset 0 0 10px #00aaff33; }
 .primary-sphere:hover { box-shadow: 0 0 20px #4dcaff, 0 0 40px #4dcaff; }
 .telegram { width: 160px; height: 160px; top: 15%; left: 28%; }
 .youtube, .tiktok { width: 140px; height: 140px; }
-.youtube { top: 50%; left: 10%; transform: translateY(-50%); }
+.youtube { top: 50%; left: 10%;  }
 .tiktok { top: 78%; left: 35%; }
 
 .secondary-sphere { width: 100px; height: 100px; opacity: 0.7; box-shadow: 0 0 8px #6c757d, 0 0 15px #6c757d, inset 0 0 10px #6c757d33; }
@@ -181,6 +180,7 @@ body {
         width: 32px;
         height: 32px;
         fill: #fff;
+        filter: brightness(0) invert(1);
     }
     .mobile-link span {
         font-size: 0.8em;
