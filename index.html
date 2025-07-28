@@ -1,13 +1,87 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React + TS</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lruns</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="page-wrapper">
+        <div class="background-blobs">
+            <div class="blob blob1"></div>
+            <div class="blob blob2"></div>
+            <div class="blob blob3"></div>
+        </div>
+        <div class="container">
+            <div class="main-display">
+                <div class="avatar-container">
+                    <img src="icon-image.jpg" alt="Lruns" class="avatar-image">
+                </div>
+    
+                <div class="center-sphere">
+                    <div class="content">
+                        <h1>Lruns</h1>
+                        <p>Я видеоблогер. Создаю видео на различные темы: путешествия, летсплеи, обучающие ролики и скетчи.</p>
+                        <div class="future-text">В будущем вы узнаете, что значит Lruns, и увидите интерактивную книгу!</div>
+                    </div>
+                </div>
+            </div>
+            <div class="desktop-links">
+                <a href="https://t.me/lruns" class="sphere primary-sphere telegram">
+                    <svg width="800px" height="800px" viewBox="0 0 48 48" id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg"><defs><style>.cls-1{fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;}</style></defs><path class="cls-1" d="M40.83,8.48c1.14,0,2,1,1.54,2.86l-5.58,26.3c-.39,1.87-1.52,2.32-3.08,1.45L20.4,29.26a.4.4,0,0,1,0-.65L35.77,14.73c.7-.62-.15-.92-1.07-.36L15.41,26.54a.46.46,0,0,1-.4.05L6.82,24C5,23.47,5,22.22,7.23,21.33L40,8.69a2.16,2.16,0,0,1,.83-.21Z"/></svg>
+                <a href="https://youtube.com/@lruns" class="sphere primary-sphere youtube">
+                    <svg width="800px" height="800px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><defs><style>.a{fill:none;stroke:#ffffff;stroke-linecap:round;stroke-linejoin:round;}</style></defs><path class="a" d="M43.1124,14.394a5.0056,5.0056,0,0,0-3.5332-3.5332c-2.3145-.8936-24.7326-1.3314-31.2358.0256A5.0059,5.0059,0,0,0,4.81,14.42c-1.0446,4.583-1.1239,14.4914.0256,19.1767A5.006,5.006,0,0,0,8.369,37.13c4.5829,1.0548,26.3712,1.2033,31.2358,0a5.0057,5.0057,0,0,0,3.5332-3.5333C44.2518,28.6037,44.3311,19.31,43.1124,14.394Z"/><path class="a" d="M30.5669,23.9952,20.1208,18.004V29.9863Z"/></svg>
+                </a>
+                <a href="https://tiktok.com/@l.runs" class="sphere primary-sphere tiktok">
+                    <svg width="800px" height="800px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><defs><style>.a{fill:none;stroke:#ffffff;stroke-linecap:round;stroke-linejoin:round;}</style></defs><path class="a" d="M18.73,22.4A10.55,10.55,0,1,0,29.27,33V4.5A10.55,10.55,0,0,0,39.82,15.05"/></svg>
+                </a>
+                <a href="https://vk.com/lruns" class="sphere secondary-sphere vk">
+                    <svg width="800px" height="800px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><defs><style>.a{fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;}</style></defs><path class="a" d="M27.55,35.19V28.55c4.46.68,5.87,4.19,8.71,6.64H43.5a29.36,29.36,0,0,0-7.9-10.47c2.6-3.58,5.36-6.95,6.71-12.06H35.73c-2.58,3.91-3.94,8.49-8.18,11.51V12.66H18l2.28,2.82,0,10.05c-3.7-.43-6.2-7.2-8.91-12.87H4.5C7,20.32,12.26,37.13,27.55,35.19Z"/></svg>
+                </a>
+                <a href="https://instagram.com/l.runs" class="sphere secondary-sphere instagram">
+                    <svg width="800px" height="800px" viewBox="0 0 48 48" id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg"><defs><style>.cls-1{fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;}</style></defs><path class="cls-1" d="M35.38,10.46a2.19,2.19,0,1,0,2.16,2.22v-.06A2.18,2.18,0,0,0,35.38,10.46Z"/><path class="cls-1" d="M40.55,5.5H7.45a2,2,0,0,0-1.95,2v33.1a2,2,0,0,0,2,2h33.1a2,2,0,0,0,2-2V7.45A2,2,0,0,0,40.55,5.5Z"/><path class="cls-1" d="M24,15.72A8.28,8.28,0,1,0,32.28,24h0A8.28,8.28,0,0,0,24,15.72Z"/></svg>
+                </a>
+            </div>
+            <div class="mobile-links">
+                <a href="https://t.me/lruns" class="mobile-link">
+                    <div class="mobile-link-icon">
+                        <svg width="800px" height="800px" viewBox="0 0 48 48" id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg"><defs><style>.cls-1{fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;}</style></defs><path class="cls-1" d="M40.83,8.48c1.14,0,2,1,1.54,2.86l-5.58,26.3c-.39,1.87-1.52,2.32-3.08,1.45L20.4,29.26a.4.4,0,0,1,0-.65L35.77,14.73c.7-.62-.15-.92-1.07-.36L15.41,26.54a.46.46,0,0,1-.4.05L6.82,24C5,23.47,5,22.22,7.23,21.33L40,8.69a2.16,2.16,0,0,1,.83-.21Z"/></svg>
+                    </div>
+                    <span>Telegram</span>
+                </a>
+                <a href="https://youtube.com/@lruns" class="mobile-link">
+                    <div class="mobile-link-icon">
+                        <svg width="800px" height="800px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><defs><style>.a{fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;}</style></defs><path class="a" d="M43.1124,14.394a5.0056,5.0056,0,0,0-3.5332-3.5332c-2.3145-.8936-24.7326-1.3314-31.2358.0256A5.0059,5.0059,0,0,0,4.81,14.42c-1.0446,4.583-1.1239,14.4914.0256,19.1767A5.006,5.006,0,0,0,8.369,37.13c4.5829,1.0548,26.3712,1.2033,31.2358,0a5.0057,5.0057,0,0,0,3.5332-3.5333C44.2518,28.6037,44.3311,19.31,43.1124,14.394Z"/><path class="a" d="M30.5669,23.9952,20.1208,18.004V29.9863Z"/></svg>
+                    </div>
+                    <span>YouTube</span>
+                </a>
+                <a href="https://tiktok.com/@l.runs" class="mobile-link">
+                    <div class="mobile-link-icon">
+                        <svg width="800px" height="800px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><defs><style>.a{fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;}</style></defs><path class="a" d="M18.73,22.4A10.55,10.55,0,1,0,29.27,33V4.5A10.55,10.55,0,0,0,39.82,15.05"/></svg>
+                    </div>
+                    <span>TikTok</span>
+                </a>
+                <a href="https://vk.com/lruns" class="mobile-link">
+                    <div class="mobile-link-icon">
+                        <svg width="800px" height="800px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><defs><style>.a{fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;}</style></defs><path class="a" d="M27.55,35.19V28.55c4.46.68,5.87,4.19,8.71,6.64H43.5a29.36,29.36,0,0,0-7.9-10.47c2.6-3.58,5.36-6.95,6.71-12.06H35.73c-2.58,3.91-3.94,8.49-8.18,11.51V12.66H18l2.28,2.82,0,10.05c-3.7-.43-6.2-7.2-8.91-12.87H4.5C7,20.32,12.26,37.13,27.55,35.19Z"/></svg>
+                    </div>
+                    <span>ВК</span>
+                </a>
+                <a href="https://instagram.com/l.runs" class="mobile-link">
+                    <div class="mobile-link-icon">
+                        <svg width="800px" height="800px" viewBox="0 0 48 48" id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg"><defs><style>.cls-1{fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;}</style></defs><path class="cls-1" d="M35.38,10.46a2.19,2.19,0,1,0,2.16,2.22v-.06A2.18,2.18,0,0,0,35.38,10.46Z"/><path class="cls-1" d="M40.55,5.5H7.45a2,2,0,0,0-1.95,2v33.1a2,2,0,0,0,2,2h33.1a2,2,0,0,0,2-2V7.45A2,2,0,0,0,40.55,5.5Z"/><path class="cls-1" d="M24,15.72A8.28,8.28,0,1,0,32.28,24h0A8.28,8.28,0,0,0,24,15.72Z"/></svg>
+                    </div>
+                    <span>Instagram*</span>
+                </a>
+            </div>
+        </div>
+        <footer class="footer-info">
+            Для связи пишите в Direct Messages в моём <a href="https://t.me/lruns"">Telegram-канале</a>.<br>
+            <span class="disclaimer">*Instagram — запрещённая в России соцсеть</span>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
 </html>

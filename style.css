@@ -1,0 +1,189 @@
+/* Базовые стили */
+body {
+    background-color: #050a19;
+    color: #e0e0e0;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    overflow-x: hidden; /* Скрываем только горизонтальный скролл */
+    min-height: 100vh;
+}
+.page-wrapper {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Анимированный фон (без изменений) */
+.background-blobs { position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden; z-index: -1; }
+.blob { position: absolute; border-radius: 50%; filter: blur(80px); opacity: 0.4; }
+.blob1 { width: 400px; height: 400px; background-color: #4d70ff; animation: move-blob1 20s infinite alternate; }
+.blob2 { width: 350px; height: 350px; background-color: #00aaff; animation: move-blob2 25s infinite alternate-reverse; }
+.blob3 { width: 300px; height: 300px; background-color: #8a4dff; animation: move-blob3 18s infinite alternate; }
+@keyframes move-blob1 { from { transform: translate(-10vw, -10vh) scale(1); } to { transform: translate(40vw, 30vh) scale(1.2); } }
+@keyframes move-blob2 { from { transform: translate(80vw, 20vh) scale(1); } to { transform: translate(10vw, 70vh) scale(0.8); } }
+@keyframes move-blob3 { from { transform: translate(50vw, 90vh) scale(0.9); } to { transform: translate(20vw, -20vh) scale(1.1); } }
+
+.container {
+    width: 100%;
+    flex-grow: 1; /* Контейнер занимает все доступное место */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* --- ИЗМЕНЕНИЕ 1: Композиция аватара и главной сферы --- */
+.main-display {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.avatar-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Сдвигаем наверх на половину своей высоты */
+    z-index: 6; /* Поверх сферы */
+}
+.avatar-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #6d90ff;
+    box-shadow: 0 0 15px #6d90ff, 0 0 30px #6d90ff;
+}
+
+/* Центральная сфера */
+.center-sphere {
+    width: 380px; /* Немного увеличил для баланса */
+    height: 380px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(20, 30, 60, 0.8) 0%, rgba(5, 10, 25, 0.9) 70%);
+    box-shadow: 0 0 15px #4d70ff, 0 0 30px #4d70ff, inset 0 0 10px #4d70ff33;
+    cursor: default;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+}
+.center-sphere .content {
+    padding: 80px 30px 40px; /* Увеличил отступ сверху для аватара и снизу для текста */
+    line-height: 1.5;
+}
+.center-sphere h1 { font-size: 2.5em; margin: 0 0 15px; font-weight: 700; color: #fff; }
+.center-sphere p { font-size: 1em; margin: 0; }
+.center-sphere .future-text { font-size: 0.9em; font-style: italic; opacity: 0.8; margin: 15px; }
+
+/* Десктопные ссылки-сферы */
+.desktop-links {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.sphere {
+    position: absolute;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: radial-gradient(circle, rgba(20, 30, 60, 0.8) 0%, rgba(5, 10, 25, 0.9) 70%);
+    box-sizing: border-box;
+    text-decoration: none;
+}
+.sphere:hover { transform: scale(1.08) !important; z-index: 10; }
+.sphere svg {width: 50%; height: 50%; transition: filter 0.3s ease; }
+.sphere {color: white}
+.sphere:hover svg { filter: drop-shadow(0 0 8px #fff); }
+
+.primary-sphere { box-shadow: 0 0 10px #00aaff, 0 0 20px #00aaff, inset 0 0 10px #00aaff33; }
+.primary-sphere:hover { box-shadow: 0 0 20px #4dcaff, 0 0 40px #4dcaff; }
+.telegram { width: 160px; height: 160px; top: 15%; left: 28%; }
+.youtube, .tiktok { width: 140px; height: 140px; }
+.youtube { top: 50%; left: 10%; transform: translateY(-50%); }
+.tiktok { top: 78%; left: 35%; }
+
+.secondary-sphere { width: 100px; height: 100px; opacity: 0.7; box-shadow: 0 0 8px #6c757d, 0 0 15px #6c757d, inset 0 0 10px #6c757d33; }
+.secondary-sphere:hover { opacity: 1; box-shadow: 0 0 15px #aab2b9, 0 0 30px #aab2b9; }
+.vk { bottom: 12%; left: 68%; }
+.instagram { top: 25%; right: 18%; }
+
+/* Мобильные ссылки по умолчанию скрыты */
+.mobile-links { display: none; }
+
+/* Футер */
+.footer-info {
+    text-align: center;
+    font-size: 0.9em;
+    color: #aaa;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.footer-info a { color: #ccc; text-decoration: none; font-weight: bold; }
+.footer-info a:hover { text-decoration: underline; }
+.footer-info .disclaimer { font-size: 0.8em; margin-top: 5px; color: #777; }
+
+/* --- ИЗМЕНЕНИЕ 4: ПОЛНОСТЬЮ ПЕРЕРАБОТАННАЯ МОБИЛЬНАЯ ВЕРСИЯ --- */
+@media (max-width: 768px) {
+    body { overflow-y: auto; }
+    .container {
+        flex-direction: column;
+        padding: 20px;
+        height: auto;
+    }
+    .main-display { margin-top: 60px; /* Отступ для аватара */ }
+    .avatar-image { width: 100px; height: 100px; }
+    .center-sphere { width: 90vw; max-width: 340px; height: auto; aspect-ratio: 1/1; }
+    .center-sphere .content { padding: 60px 20px 30px; }
+    .center-sphere h1 { font-size: 2em; }
+
+    /* Скрываем десктопные сферы и показываем мобильные ссылки */
+    .desktop-links { display: none; }
+    .mobile-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 30px;
+        width: 100%;
+        max-width: 360px;
+    }
+    .mobile-link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+        color: #e0e0e0;
+        width: 80px; /* Фиксированная ширина для каждого элемента */
+        transition: transform 0.2s ease;
+    }
+    .mobile-link:hover {
+        transform: translateY(-5px);
+    }
+    .mobile-link-icon {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 8px;
+        background: rgba(20, 30, 60, 0.8);
+        box-shadow: 0 0 10px rgba(0, 170, 255, 0.5);
+    }
+    .mobile-link-icon svg {
+        width: 32px;
+        height: 32px;
+        fill: #fff;
+    }
+    .mobile-link span {
+        font-size: 0.8em;
+        text-align: center;
+    }
+}
