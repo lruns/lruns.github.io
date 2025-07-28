@@ -127,6 +127,7 @@ body {
 .footer-info a { color: #ccc; text-decoration: none; font-weight: bold; }
 .footer-info a:hover { text-decoration: underline; }
 .footer-info .disclaimer { font-size: 0.8em; margin-top: 5px; color: #777; }
+.footer-info .disclaimer a {font-weight: lighter;}
 
 /* --- ИЗМЕНЕНИЕ 4: ПОЛНОСТЬЮ ПЕРЕРАБОТАННАЯ МОБИЛЬНАЯ ВЕРСИЯ --- */
 @media (max-width: 768px) {
